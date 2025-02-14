@@ -2,9 +2,9 @@
 
 
 import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
-import Home from "./page/Home/Home"
+// import Home from "./page/Home/Home"
 
-import Navbar from './page/Navbar'
+// import Navbar from './page/Navbar'
 import Activity from "./page/Activity";
 import Wallet from "./page/Wallet";
 import Withdrawal from "./page/Withdrawal";
@@ -18,6 +18,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getUser } from "./state/Auth/Action";
 import { BarLoader } from "react-spinners";
+import Home from "./page/Home/Home";
+import Navbar from "./page/Navbar/Navbar";
 
 
 

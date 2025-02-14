@@ -4,7 +4,7 @@
 import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
 import Home from "./page/Home/Home"
 
-import Navbar from './page/navbar/Navbar'
+import Navbar from './page/Navbar'
 import Activity from "./page/Activity";
 import Wallet from "./page/Wallet";
 import Withdrawal from "./page/Withdrawal";

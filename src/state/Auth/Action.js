@@ -5,7 +5,7 @@ export const register = (userData) => async (dispatch) => {
 
     dispatch({type:REGISTER_REQUEST})
 
-const baseurl ="https://tradbite.onrender.com";
+const baseurl ="https://tradebite.onrender.com";
     try {
         const response = await axios.post(`${baseurl}/auth/signup`, userData);
         const user = response.data;
@@ -23,7 +23,7 @@ export const login = (userData) => async (dispatch) => {
 
     dispatch({type:LOGIN_REQUEST})
 
-   const baseurl = "https://tradbite.onrender.com";
+   const baseurl = "https://tradebite.onrender.com";
     try {
         const response = await axios.post(`${baseurl}/auth/signin`, userData.data);
         const user = response.data;
@@ -42,7 +42,7 @@ export const getUser = (jwt) => async (dispatch) => {
 
     dispatch({type:GET_USER_REQUEST})
 
-   const baseurl = "https://tradbite.onrender.com";
+   const baseurl = "https://tradebite.onrender.com";
     try {
         const response = await axios.get(
             `${baseurl}/api/users/profile`, {

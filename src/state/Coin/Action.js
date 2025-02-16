@@ -24,7 +24,7 @@ import {
 export const getcoinlist = (page) => async (dispatch) => {
   dispatch({ type: FETCH_COIN_LIST_REQUEST });
 
-  const baseurl = "http://localhost:8080";
+const baseurl = "https://tradbite-backend.onrender.com";
   try {
     const { data } = await api.get(
       `${baseurl}/coins?page=${page}`
@@ -43,7 +43,7 @@ export const getcoinlist = (page) => async (dispatch) => {
 export const gettop50coinlist = () => async (dispatch) => {
     dispatch({ type: FETCH_TOP50_COINS_REQUEST });
     
-    const baseurl = "http://localhost:8080";
+   const baseurl = "https://tradbite-backend.onrender.com";
     try {
         const response = await api.get(`${baseurl}/coins/top50`);
     
@@ -58,7 +58,7 @@ export const gettop50coinlist = () => async (dispatch) => {
  
 export const fetchmarketchart = ({coinid, days, jwt}) => async (dispatch) => {
     dispatch({ type: FETCH_COIN_MARKET_CHART_REQUEST });
-    const baseurl = "http://localhost:8080";
+   const baseurl = "https://tradbite-backend.onrender.com";
   try {
       console.log("fetch",coinid);
         const response = await api.get(
@@ -99,7 +99,7 @@ export const fetchcoinbyid = (coinid) => async (dispatch) => {
 
 export const fetchcoindetails = ({coinid, jwt}) => async (dispatch) => {
     dispatch({ type: FETCH_COIN_DETAILS_REQUEST });
-    const baseurl = "http://localhost:8080";
+   const baseurl = "https://tradbite-backend.onrender.com";
     try {
         console.log("its here",coinid);
       const response = await api.get(`${baseurl}/coins/details/${coinid}`, {

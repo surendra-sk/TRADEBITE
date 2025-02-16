@@ -7,7 +7,7 @@ export const register = (userData) => async (dispatch) => {
 
 const baseurl = "https://tradbite-backend.onrender.com";
     try {
-        const response = await axios.post(`${baseurl}auth/signup`, userData);
+        const response = await axios.post(`${baseurl}/auth/signup`, userData);
         const user = response.data;
         console.log(user);
         dispatch({ type: REGISTER_SUCCESS, payload: user.jwt });
